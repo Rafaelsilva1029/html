@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIPAS - Sistema de Códigos Operacionais</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tractor"></i>
+                <h1>PIPAS</h1>
+            </div>
+            <h2>Sistema de Códigos Operacionais</h2>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar códigos, operações ou centros de custo...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="op-prod">Operações</button>
+                <button class="filter-btn" data-filter="centro-custo">Centros de Custo</button>
+                <button class="filter-btn" data-filter="paradas">Paradas</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="table-container">
+                <div class="table-section">
+                    <h3>Operações de Produção</h3>
+                    <table id="opProdTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Operação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Conteúdo será preenchido via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Centros de Custo</h3>
+                    <table id="centroCustoTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Centro de Custo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Conteúdo será preenchido via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-section">
+                    <h3>Paradas</h3>
+                    <table id="paradasTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Conteúdo será preenchido via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+            <i class="fas fa-search"></i>
+            <p>Nenhum resultado encontrado para sua pesquisa.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 PIPAS - Sistema de Códigos Operacionais</p>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
